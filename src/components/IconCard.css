@@ -1,0 +1,11 @@
+.icon_image{
+   width: 100px;
+   height: 70px;
+   border: 1px solid teal;
+   transform: rotate(45deg);
+   text-align: center;
+   border-radius: 7px;
+}
+.icon_image img{
+    transform: rotate(-45deg);
+}
