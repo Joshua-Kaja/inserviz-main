@@ -1,42 +1,24 @@
-import React, { useState } from "react";
+import React from 'react';
 
-function Search() {
-  const [selected, setSelected] = useState("");
-  const handleOptionChange = (event) => {
-    const dropdown = event.target.value;
-    setSelected(dropdown);
-  };
+const  Search = () => {
+  function handleOptionChange(e) {
+    const value = e.target.value;
+  }
 
   return (
-    <div className="dropdown-menu">
-      <div className="dropdown">
-        <label htmlFor="dropdown"></label>
-        <select
-          className="dropdown-select"
-          value={selected}
-          onChange={handleOptionChange}
-        >
-          <option value="option1" className="opt">
-            UI/UX Designer
-          </option>
-          <option value="option2" className="opt">
-            Frontend Developer
-          </option>
-          <option value="option3" className="opt">
-            Backend Developer
-          </option>
-          <option value="option4" className="opt">
-            Full stack developer
-          </option>
-          <option value="option5" className="opt">
-            Graphic Designer
-          </option>
-          <option value="option6" className="opt">
-            Mobile Developer
-          </option>
-        </select>
-      </div>
+    <div className='dropdown'>
+      <select name="specialty" id="drop_select" onChange={handleOptionChange}>
+       
+        <option value="ui/ux designer">U1/UX Designer</option>
+        <option value="frontend developer">Frontend Developer</option>
+        <option value="backend developer">Backend Developer</option>
+        <option value="grahic designer">Graphic Designer</option>
+        <option value="software eng">Software Engineer</option>
+        <option value="game dev">Game Developer</option>
+        <option value="mobile dev">Mobile Developer</option>
+      </select>
     </div>
+    
   );
 }
 export default Search;

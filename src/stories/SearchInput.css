@@ -23,7 +23,7 @@
 
 ::placeholder{
     font-size: 15px;
-    color: black ;
+    color: gray ;
 }
 
 .SearchInput span{
@@ -53,7 +53,7 @@
     
 }
 
-.Dropdown-Search{
+.dropdown_Search{
     display: flex;
     flex-direction: row;
     background: #eff3f2;
@@ -61,37 +61,45 @@
     margin: 1.4rem;
     padding: 1.3rem;
     border-radius: 0.5rem;
-    width: 21.5rem;
-    margin-right: 30px;
+    width:24rem;
+    margin-right: 18px;
+    margin-left:16px;
+    height:4rem;
+    cursor: pointer;
     
 }
 
 
-
 .dropdown>select{
     height: 1.6rem;
-    width: 17rem;
+    width: 19rem;
     border:0;
     background: 0;
     outline:0;
     cursor: pointer;
     transition: all 300ms ease;
+    font-size:1.1rem;
 }
 
 select option{
+    font-size: 1.3rem;
+    
+}
+
+/* select option{
     font-size: 20px;
     padding:25px;
     cursor: pointer;
     margin-top: 1rem;
-}
+} */
 
-.dropdown-select.opt{
+/* .dropdown-select.opt{
     cursor: pointer;
 }
 
 .dropdown select{
     font-size: 16px;
-}
+} */
 
 
 .button-click{
@@ -104,8 +112,6 @@ select option{
     color: white;
     gap: 5px;
     width: 7rem;  
-    
-
 }
 
 .button-click>button{
@@ -120,9 +126,8 @@ select option{
 .button-click:hover{
     background: #000;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease-in-out;
     background-position: center;
-    background-image: linear-gradient(to right, black, black);
     background-repeat: no-repeat;
     background-position: left;
 }
