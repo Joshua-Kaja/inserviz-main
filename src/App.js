@@ -10,7 +10,7 @@ function App() {
     <div className="mb-5">
       <FeatureCard image="https://template.inserviz.com/assets/images/bg/job-list-2.png" />
       <SearchInput />
-      <Search />
+      {/* <Search /> */}
       {/* <IconCard /> */}
     </div>
   );
