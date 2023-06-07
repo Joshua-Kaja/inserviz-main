@@ -1,19 +1,26 @@
-import logo from "./logo.svg";
-import "./App.css";
-import FeatureCard from "./components/FeatureCard";
-import SearchInput from "./stories/SearchInput";
-import IconCard from "./components/IconCard";
-import Search from "./stories/Search";
+import "./App.css"
+import Account from "./components/Account"
+
+import FeatureCard from "./components/FeatureCard"
+import Features from "./components/Features"
+import SearchInput from "./stories/SearchInput"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
     <div className="mb-5">
-      <FeatureCard image="https://template.inserviz.com/assets/images/bg/job-list-2.png" />
-      <SearchInput />
-      {/* <Search /> */}
-      {/* <IconCard /> */}
+      <Router>
+        <FeatureCard image="https://template.inserviz.com/assets/images/bg/job-list-2.png"/>
+        <SearchInput />
+        <Routes>
+          <Route path="account" element={<Account/>}/>
+        </Routes>
+        <Features/>
+      </Router>
+      
+
     </div>
   );
 }
 
-export default App;
+export default App
