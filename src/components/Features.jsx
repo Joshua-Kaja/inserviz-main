@@ -1,20 +1,36 @@
+
+
 import React from 'react'
 import './Features.css'
-import { featureInfo } from './Feature'
 import { Link } from 'react-router-dom'
+import imgFeature from './icon/account-finance-06.svg'
 
-const Features = () => {
+const Features = ({img, title, detail}) => {
+
+  const data = {
+    img:imgFeature,
+    title:'Account & Finance',
+    detail:'Job Available: '
+  };
+
   return (
-    <div className='features'>
-        <div className='features_category'>
-          <img src={featureInfo.img} alt="" style={{width:'43px'}}/>
-          <Link  style={{textDecoration:0, color:'black'}} to='account'><h3>{featureInfo.title}</h3></Link>
-          
-          <span>{featureInfo.detail}<span style={{color:'#00a7ac', fontWeight:'bold'}}> 44</span></span>
-        </div>
-    </div>
+   
+    <ChildComponent data={data}/>
   )
 }
 
-export default Features
+function ChildComponent({data}) {
+  const {img, title, detail} = data;
+  return(
+    <div className='feature_container'>
+      <div className='feature_category'>
+        <img src={img} alt="" style={{width:'43px'}}/>
+        <Link style={{textDecoration:'0', color:'black'}}><h3>{title}</h3></Link>
+        <span>{detail}<span style={{color:'#00a7ac', fontWeight:'bold'}}> 44</span></span>
+      </div>
+    </div>
+  )
 
+}
+
+export default Features
